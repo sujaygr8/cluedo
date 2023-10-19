@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluedo Game Checklist</title>
+</head>
+<body>
+    <h1>Cluedo Game Checklist</h1>
+    
+    <h2>Suspects</h2>
+    <ul id="suspects">
+        <li><input type="checkbox" id="scarlett"><label for="scarlett">Miss Scarlett</label></li>
+        <li><input type="checkbox" id="mustard"><label for="mustard">Colonel Mustard</label></li>
+        <!-- Add more suspects here -->
+    </ul>
+
+    <h2>Rooms</h2>
+    <ul id="rooms">
+        <!-- Add rooms here -->
+    </ul>
+
+    <h2>Weapons</h2>
+    <ul id="weapons">
+        <!-- Add weapons here -->
+    </ul>
+
+    <script>
+        // JavaScript to handle checkbox changes
+        document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    this.nextElementSibling.style.textDecoration = 'line-through';
+                } else {
+                    this.nextElementSibling.style.textDecoration = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
